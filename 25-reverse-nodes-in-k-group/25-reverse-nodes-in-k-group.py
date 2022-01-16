@@ -10,17 +10,6 @@ class Solution:
         if k <= 1 or not head or not head.next:
             return head
         
-#         start = a = head
-#         b = head.next
-#         for _ in range(k-1):
-#             a, b.next = b.next, a
-#             a, b = b, a
-#         start.next = a.next
-#         new_head = a
-        
-#         start = a = a.next
-        
-        ###########################
         stack = []
         new_head = None
         prev_node = None
