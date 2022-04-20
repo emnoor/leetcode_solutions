@@ -8,7 +8,7 @@ class ZeroEvenOdd:
         self.zero_q.put(1)
         self.other_qs = [Queue(), Queue()]
 
-	# printNumber(x) outputs "x", where x is an integer.
+    # printNumber(x) outputs "x", where x is an integer.
     def zero(self, printNumber: 'Callable[[int], None]') -> None:
         for i in range(1, self.n+1):
             self.zero_q.get()
