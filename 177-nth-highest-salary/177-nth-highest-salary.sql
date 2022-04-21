@@ -3,7 +3,7 @@ BEGIN
     DECLARE ofst INT;
     SET ofst = N - 1;
     RETURN (
-        SELECT coalesce(max(T.salary), NULL)
+        SELECT max(T.salary)
         FROM (
             SELECT salary
             FROM Employee
