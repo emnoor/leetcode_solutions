@@ -1,4 +1,4 @@
-SELECT coalesce(max(T.salary), NULL) AS SecondHighestSalary
+SELECT max(T.salary) AS SecondHighestSalary
 FROM (
     SELECT salary
     FROM Employee
