@@ -4,19 +4,14 @@
 #         self.val = x
 #         self.next = None
 
-def jump(node):
-    if not node:
-        return node
-    return node.next
-
-
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        turtle = jump(head)
-        here = jump(jump(head))
-        
-        while turtle and here and turtle != here:
-            turtle = jump(turtle)
-            here = jump(jump(here))
-            
-        return turtle and here and turtle == here
+        try:
+            turtle = head
+            here = head.next
+            while turtle != here:
+                turtle = turtle.next
+                here = here.next.next
+            return True
+        except AttributeError:
+            return False
