@@ -1,5 +1,6 @@
 class Solution {
     public int minCost(String colors, int[] neededTime) {
+        char colorsArr[] = colors.toCharArray();
         int n = neededTime.length;
         int i = 0;
         int totalTime = 0;
@@ -9,7 +10,7 @@ class Solution {
             int sm = 0;
             int j = i;
             for (; j < n; j++) {
-                if (colors.charAt(j) != colors.charAt(i)) {
+                if (colorsArr[j] != colorsArr[i]) {
                     i = j;
                     break;
                 }
