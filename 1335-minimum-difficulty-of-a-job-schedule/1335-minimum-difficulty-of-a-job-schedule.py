@@ -1,4 +1,4 @@
-from functools import cache
+from functools import lru_cache
 
 
 class Solution:
